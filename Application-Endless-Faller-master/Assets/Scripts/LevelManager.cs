@@ -21,6 +21,7 @@ public class LevelManager : MonoBehaviour
     public void IncrementScore()
     {
         Score++;
+        Debug.Log("score: " + Score);
     }
 
     public void Reset()

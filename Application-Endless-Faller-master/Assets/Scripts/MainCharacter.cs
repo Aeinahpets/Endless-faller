@@ -22,8 +22,11 @@ public class MainCharacter : MonoBehaviour
         }
     }
 
-    void OnBecameInvisible()
+    private void OnCollisionEnter(Collision collision)
     {
-        FindObjectOfType<GameManager>().GameOver();
+        if (collision.gameObject.CompareTag("Limit"))
+        {
+            FindObjectOfType<GameManager>().GameOver();
+        }
     }
 }

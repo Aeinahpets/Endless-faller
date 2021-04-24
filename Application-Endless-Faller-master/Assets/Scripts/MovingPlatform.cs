@@ -2,10 +2,11 @@
 
 public class MovingPlatform : MonoBehaviour
 {
-    [SerializeField] private float speed;
-
+    [SerializeField] private float speed=2.0f;
+    private bool touched;
     void Start()
     {
+        touched = false;
     }
 
     // Update is called once per frame
@@ -16,6 +17,16 @@ public class MovingPlatform : MonoBehaviour
         if (gameObject.transform.position.y > 10.0f)
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("colisao");
+        if (collision.gameObject.CompareTag("Player") && !touched)
+        {
+            touched = true;
+            FindObjectOfType<LevelManager>().IncrementScore();
         }
     }
 
