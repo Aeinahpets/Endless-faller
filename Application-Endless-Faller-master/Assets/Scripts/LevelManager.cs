@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary> Manages the state of the level </summary>
 public class LevelManager : MonoBehaviour
 {
     public int Score;
-    
+    public GameObject GameOverUI;
+    public Text scoreText;
 
     void Start()
     {
@@ -15,7 +17,7 @@ public class LevelManager : MonoBehaviour
 
     void Update()
     {
-        
+        scoreText.text= "Score: " +Score.ToString();
     }
 
     public void IncrementScore()
@@ -29,4 +31,12 @@ public class LevelManager : MonoBehaviour
         Score = 0;
         // reset logic
     }
+
+    public void GameOver()
+    {
+        GameOverUI.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+
 }

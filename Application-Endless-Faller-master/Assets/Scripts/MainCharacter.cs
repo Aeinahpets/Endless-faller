@@ -26,7 +26,7 @@ public class MainCharacter : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Limit"))
         {
-            FindObjectOfType<GameManager>().GameOver();
+            FindObjectOfType<LevelManager>().GameOver();
         }
     }
 }

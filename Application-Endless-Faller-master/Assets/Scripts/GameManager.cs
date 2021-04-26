@@ -14,10 +14,8 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(gameScene);
     }
 
-    public void GameOver()
+    public void MainMenu()
     {
-        Debug.Log("GAME OVER");
         SceneManager.LoadScene("Home");
     }
-
 }

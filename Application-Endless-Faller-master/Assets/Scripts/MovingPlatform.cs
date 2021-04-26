@@ -3,32 +3,33 @@
 public class MovingPlatform : MonoBehaviour
 {
     [SerializeField] private float speed=2.0f;
-    private bool touched;
-    public GameObject player;
+    private bool ScoreAdded=false;
+    public Transform player;
 
     void Start()
     {
+        player = FindObjectOfType<MainCharacter>().transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-            transform.position += Vector3.up *0.005f*speed*Time.timeScale;
+        transform.position += Vector3.up * Time.timeScale * 0.005f * speed;
 
         if (gameObject.transform.position.y > 10.0f)
         {
             Destroy(gameObject);
         }
+
+        if(player.position.y < gameObject.transform.position.y && ScoreAdded==false)
+        {
+            FindObjectOfType<LevelManager>().IncrementScore();
+            ScoreAdded = true;
+        }
+
+
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("colisao");
-        if (collision.gameObject.CompareTag("Player") && !touched)
-        {
-            touched = true;
-            FindObjectOfType<LevelManager>().IncrementScore();
-        }
-    }
+    
 
 }
