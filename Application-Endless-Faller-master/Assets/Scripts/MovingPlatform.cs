@@ -21,13 +21,18 @@ public class MovingPlatform : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(player.position.y < gameObject.transform.position.y && ScoreAdded==false)
+        addScore();
+
+    }
+
+    void addScore()
+    {
+
+        if (player.position.y < gameObject.transform.position.y && ScoreAdded == false)
         {
             FindObjectOfType<LevelManager>().IncrementScore();
             ScoreAdded = true;
         }
-
-
     }
 
     

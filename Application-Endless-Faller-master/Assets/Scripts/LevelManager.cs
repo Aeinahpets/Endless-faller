@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     public int Score;
     public GameObject GameOverUI;
     public Text scoreText;
+    public Text GameOverScore;
 
     void Start()
     {
@@ -36,6 +37,7 @@ public class LevelManager : MonoBehaviour
     {
         GameOverUI.SetActive(true);
         Time.timeScale = 0f;
+        GameOverScore.text = "Score: " + Score.ToString();
     }
 
 
