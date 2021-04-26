@@ -19,4 +19,5 @@ public class GameManager : MonoBehaviour
         Debug.Log("GAME OVER");
         SceneManager.LoadScene("Home");
     }
+
 }

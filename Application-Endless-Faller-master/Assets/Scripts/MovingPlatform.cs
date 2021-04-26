@@ -4,15 +4,16 @@ public class MovingPlatform : MonoBehaviour
 {
     [SerializeField] private float speed=2.0f;
     private bool touched;
+    public GameObject player;
+
     void Start()
     {
-        touched = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-            transform.position += Vector3.up *0.005f*speed;
+            transform.position += Vector3.up *0.005f*speed*Time.timeScale;
 
         if (gameObject.transform.position.y > 10.0f)
         {
