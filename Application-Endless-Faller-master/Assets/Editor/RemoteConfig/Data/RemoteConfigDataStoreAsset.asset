@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
+  m_Name: RemoteConfigDataStoreAsset
+  m_EditorClassIdentifier: 
+  rsKeyList:
+  - metadata:
+      entityId: 25771899-2dc0-4dae-8543-e63b19b24406
+    rs:
+      key: ChageSpawnRate
+      type: float
+      value: 0
+  rsLastCachedKeyList: []
+  configId: 
+  currentEnvironmentId: 274ad1ed-18f5-4aa7-b4a5-39daf4dd5236
+  environments:
+  - id: 480125e9-2668-49a2-b178-cd53d0ec5b93
+    appId: 
+    name: Release (Default)
+    description: 
+    createdAt: 2021-04-27T21:15:55Z
+    updatedAt: 2021-04-27T21:15:55Z
+  - id: 274ad1ed-18f5-4aa7-b4a5-39daf4dd5236
+    appId: 
+    name: Development
+    description: 
+    createdAt: 2021-04-27T21:15:55Z
+    updatedAt: 2021-04-27T21:15:55Z
+  rulesList: []
+  lastCachedRulesList: []
+  addedRulesIDs: []
+  updatedRulesIDs: []
+  deletedRulesIDs: []
