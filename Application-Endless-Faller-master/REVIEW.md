@@ -18,6 +18,8 @@ To make the player lose and do the bonus requirement of not using OnBecameInvisi
 
 The Game Over screen has a button that returns to the main menu using the same function as the pause screen, and shows the current score and the highscore.
 
+For the score, each platform has a fucntion that increases the score by 1 when the player position is below the platform.
 
+For the highscore i searched online a way to save them without using playerPrefs and found a tutorial on how to save and load from a binary file and used it to save the highscore. I made a new script "GameControl" where a save and load function were implemented to have access or modify the highscore in the file. Whenever a score surpasses the highscore, the highscore is updated and persists when reseting the game and can be also accessed by the main menu to display it.
 
-
+To increase the platform spawn rate I made a simple function on the level manager that adds an acceleration whenever a platform spawns.
