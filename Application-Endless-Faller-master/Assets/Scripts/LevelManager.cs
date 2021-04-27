@@ -13,9 +13,13 @@ public class LevelManager : MonoBehaviour
     public Text highScoreText;
     public Text GameOverScore;
     public Text GameOverHighScore;
+    public float speed = 2.0f;
+    [SerializeField] private float acceleration = 0.05f;
+    public GameObject newHS;
 
     void Start()
     {
+        newHS.SetActive(false);
         Score = 0;
         GameControl.control.Load();
         highScoreText.text = "Highscore: " + GameControl.control.highscore;
@@ -31,7 +35,6 @@ public class LevelManager : MonoBehaviour
     public void IncrementScore()
     {
         Score++;
-        Debug.Log("score: " + Score);
     }
 
     public void Reset()
@@ -56,7 +59,17 @@ public class LevelManager : MonoBehaviour
             GameControl.control.Save();
             highScoreText.color = Color.red;
             highScoreText.text = "Highscore: " + GameControl.control.highscore;
+            newHS.SetActive(true);
+
         }
+
+    }
+
+    public void IncreaseSpeed()
+    {
+        speed += acceleration;
+        Debug.Log("acceleration: " + acceleration);
+        Debug.Log("current speed: " + speed);
 
     }
 }

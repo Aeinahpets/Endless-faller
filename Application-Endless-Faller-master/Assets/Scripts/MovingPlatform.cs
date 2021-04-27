@@ -3,19 +3,24 @@
 public class MovingPlatform : MonoBehaviour
 {
     [SerializeField] private float speed=2.0f;
-    private bool ScoreAdded=false;
-    public Transform player;
 
+    private bool ScoreAdded=false;
+    private Transform player;
+    private LevelManager lm;
     void Start()
     {
         player = FindObjectOfType<MainCharacter>().transform;
+        lm = FindObjectOfType<LevelManager>();
+        speed = lm.speed;
+        lm.IncreaseSpeed();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.up * Time.timeScale * 0.005f * speed;
-
+        transform.Translate(Vector3.up * Time.timeScale * 0.005f * speed);
+       
         if (gameObject.transform.position.y > 10.0f)
         {
             Destroy(gameObject);
@@ -35,6 +40,6 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    
+
 
 }

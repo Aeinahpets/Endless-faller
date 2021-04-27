@@ -9,13 +9,6 @@ public class PlatformGenerator : MonoBehaviour
     private float distaceBetween;
     public Transform SpawnNext;
 
-
-    void awake()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if(FirstPlatform.position.y > -1)
