@@ -22,4 +22,12 @@ For the score, each platform has a fucntion that increases the score by 1 when t
 
 For the highscore i searched online a way to save them without using playerPrefs and found a tutorial on how to save and load from a binary file and used it to save the highscore. I made a new script "GameControl" where a save and load function were implemented to have access or modify the highscore in the file. Whenever a score surpasses the highscore, the highscore is updated and persists when reseting the game and can be also accessed by the main menu to display it.
 
-To increase the platform spawn rate I made a simple function on the level manager that adds an acceleration whenever a platform spawns.
+To increase the platform spawn rate over time I made a simple function on the level manager that adds an acceleration whenever a platform spawns.
+
+To change the initial spawn rate, an input field was created in the initial menu that lets the player choose the spawn rate from 1 to 10. I limited it this way because the game is unplayable at a rate over 10. I used the GameControl script to save the rate field.
+
+Overall the parts that took the longest were figuring out a way to add a ponint to the score, after that the implementation was easy. Also finding out how to save a highscore without using playerPrefs, and I learned that playerPrefs is not secure to save data. Configuring the spawn data also took some time because initially I was tried to use remote config but the requirement didn't say it couldn't be done in the game so I decided to do directly on the menu screen.
+
+I did not implement automatic tests as I didn't really understand how to do it.
+
+
