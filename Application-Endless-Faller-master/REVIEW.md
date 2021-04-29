@@ -32,3 +32,7 @@ I did not implement automatic tests as I didn't really understand how to do it.
 
 By the end of the project i had some problems with git so the last thing I did, which was the spawn rate, had to be redone because it didn't get saved on git.
 
+And when doing the build some problems emerged, the il2cpp wasn't installed, and some build errors appeared related to il2cpp, so I changed the Scripting backend to Mono.
+
+After maing the build I noticed that the speed of the player was really low and the platform movement was lowas as well. I also noticed that it would be usefull to have a quit button to close the game. So I added the Quit button and changed the velocities of the objects.
+
