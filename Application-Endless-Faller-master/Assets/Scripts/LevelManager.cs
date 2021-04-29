@@ -23,7 +23,12 @@ public class LevelManager : MonoBehaviour
         Score = 0;
         GameControl.control.Load();
         highScoreText.text = "Highscore: " + GameControl.control.highscore;
-        speed = GameControl.control.spawnRate;
+
+        if(GameControl.control.spawnRate>0 && GameControl.control.spawnRate <= 10)
+        {
+            speed = GameControl.control.spawnRate;
+        }
+        
     }
 
     void Update()

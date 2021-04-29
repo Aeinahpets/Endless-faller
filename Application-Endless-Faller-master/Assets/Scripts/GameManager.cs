@@ -21,5 +21,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(homeScene);        
     }
 
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
 }
 

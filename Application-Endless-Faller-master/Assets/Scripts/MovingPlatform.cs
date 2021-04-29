@@ -19,7 +19,7 @@ public class MovingPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.up * Time.timeScale * 0.005f * speed);
+        transform.Translate(Vector3.up * Time.timeScale * 0.01f * speed);
        
         if (gameObject.transform.position.y > 10.0f)
         {
