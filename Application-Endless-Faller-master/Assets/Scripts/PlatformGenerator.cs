@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class PlatformGenerator : MonoBehaviour
 {
-    public Transform FirstPlatform;
+    private Transform FirstPlatform;
     public List<GameObject> NextPlatformList;
     private float distaceBetween;
     public Transform SpawnNext;
+
+    private void Start()
+    {
+        spawn();
+    }
 
     void Update()
     {

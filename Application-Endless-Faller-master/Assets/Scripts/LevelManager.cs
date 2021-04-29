@@ -68,7 +68,6 @@ public class LevelManager : MonoBehaviour
     public void IncreaseSpeed()
     {
         speed += acceleration;
-        Debug.Log("acceleration: " + acceleration);
         Debug.Log("current speed: " + speed);
 
     }

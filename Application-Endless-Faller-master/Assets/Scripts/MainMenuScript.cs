@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class menuHighscore : MonoBehaviour
+public class MainMenuScript : MonoBehaviour
 {
-
     public Text highscore;
 
     void Start()
@@ -14,5 +13,4 @@ public class menuHighscore : MonoBehaviour
         highscore.text = "Highscore: " + GameControl.control.highscore.ToString();
 
     }
-
 }

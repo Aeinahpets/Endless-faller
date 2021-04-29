@@ -10,6 +10,7 @@ public class GameControl : MonoBehaviour
     public static GameControl control;
 
     public int highscore;
+    public float spawnRate;
 
     private void Awake()
     {
@@ -30,6 +31,8 @@ public class GameControl : MonoBehaviour
 
         PlayerData data = new PlayerData();
         data.highscore = highscore;
+        data.spawnRate = spawnRate;
+
         bf.Serialize(file,data);
         file.Close();
     }
@@ -44,6 +47,7 @@ public class GameControl : MonoBehaviour
             file.Close();
 
             highscore = data.highscore;
+            spawnRate = data.spawnRate;
         }
 
 
@@ -55,4 +59,5 @@ public class GameControl : MonoBehaviour
 class PlayerData
 {
     public int highscore;
+    public float spawnRate;
 }
