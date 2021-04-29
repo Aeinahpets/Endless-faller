@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour
         Score = 0;
         GameControl.control.Load();
         highScoreText.text = "Highscore: " + GameControl.control.highscore;
-
+        speed = GameControl.control.spawnRate;
     }
 
     void Update()
@@ -60,9 +60,7 @@ public class LevelManager : MonoBehaviour
             highScoreText.color = Color.red;
             highScoreText.text = "Highscore: " + GameControl.control.highscore;
             newHS.SetActive(true);
-
         }
-
     }
 
     public void IncreaseSpeed()
